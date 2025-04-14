@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../../components/Hero/Hero";
+import JobCategorySection from "../../components/JobCategorySection/JobCategorySection";
 import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
@@ -7,6 +8,9 @@ const Home = () => {
     <div>
       <Navbar></Navbar>
       <Hero></Hero>
+      <main className="max-w-7xl mx-auto">
+        <JobCategorySection></JobCategorySection>
+      </main>
     </div>
   );
 };
