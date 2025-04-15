@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
+import Button from "../Common/Button/Button";
 import Paragraph from "../Common/Paragraph/Paragraph";
 import Title from "../Common/Title/Title";
 import Job from "../Job/Job";
@@ -8,7 +10,10 @@ const FeturedSection = () => {
   useEffect(() => {
     fetch("/jobs.json")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => {
+        const sliceData = data.slice(0, 3);
+        setJobs(sliceData);
+      });
   }, []);
   return (
     <div className="mt-24">
@@ -21,6 +26,11 @@ const FeturedSection = () => {
         {jobs.map((job) => (
           <Job key={job.id} job={job}></Job>
         ))}
+      </div>
+      <div className="text-center mt-8">
+        <Link to={`/alljobs`}>
+          <Button>All Jobs</Button>
+        </Link>
       </div>
     </div>
   );

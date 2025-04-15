@@ -1,11 +1,13 @@
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { MdAttachMoney } from "react-icons/md";
+import { Link } from "react-router";
 import Button from "../Common/Button/Button";
 import OutlineBtn from "../Common/OutlineBtn/OutlineBtn";
 
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     company_name,
     job_title,
@@ -14,7 +16,6 @@ const Job = ({ job }) => {
     location,
     salary,
   } = job;
-  console.log(job);
   return (
     <div className="border  border-[#ccc] rounded-lg px-4 py-5">
       <img className="w-1/3 mb-4" src={logo} alt="" />
@@ -32,7 +33,9 @@ const Job = ({ job }) => {
           <MdAttachMoney /> Salary: {salary}
         </span>
       </p>
-      <Button>Details</Button>
+      <Link to={`/jobs/${id}/details`}>
+        <Button>Details</Button>
+      </Link>
     </div>
   );
 };

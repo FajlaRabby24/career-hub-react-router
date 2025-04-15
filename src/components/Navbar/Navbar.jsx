@@ -4,8 +4,8 @@ import Button from "../Common/Button/Button";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-7xl mx-auto">
-      <div className="navbar bg-base-100">
+    <nav className=" bg-[#f9f8ff]">
+      <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
