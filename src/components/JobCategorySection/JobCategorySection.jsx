@@ -5,7 +5,7 @@ import JobCategories from "../JobCategories/JobCategories";
 
 const JobCategorySection = () => {
   return (
-    <section className="my-28">
+    <section>
       <Title>Job Category List</Title>
       <Paragraph>
         Explore thousands of job opportunities with all the information you
